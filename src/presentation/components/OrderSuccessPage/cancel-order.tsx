@@ -52,6 +52,13 @@ const CancelOrder: FC<Props> = ({ children }) => {
                 }
                 labelCol={{ className: "!pb-0" }}
                 className="m-0"
+                getValueFromEvent={(e) => e.option.value}
+                rules={[
+                  {
+                    required: true,
+                    message: "Vui lòng chọn lý do",
+                  },
+                ]}
               >
                 <Picker
                   mask
@@ -71,6 +78,11 @@ const CancelOrder: FC<Props> = ({ children }) => {
                           key: "key1",
                           value: 1,
                           displayName: "abc",
+                        },
+                        {
+                          key: "key1",
+                          value: 2,
+                          displayName: "dawdawdawdwadaw",
                         },
                       ],
                       name: "option",

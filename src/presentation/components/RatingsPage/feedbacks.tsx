@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tag } from "../common/tag";
 import { Divider } from "antd";
 import Customer1 from "../../static/customer-1.jpg";
-import Food2 from "../../static/food-2.jpg";
+import Food2 from "../../static/food-2.png";
 import Rate from "../common/rate";
 import { Button } from "../common/button";
 import { Select } from "../common/select";

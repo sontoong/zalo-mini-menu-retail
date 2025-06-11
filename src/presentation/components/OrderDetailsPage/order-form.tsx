@@ -60,7 +60,7 @@ const OrderForm: FC<Props> = ({ order }) => {
           <OrderMethod orderMethod={orderMethod} />
           <Divider className="m-0 border-[2px] border-stroke1a" />
         </div>
-        <Summary />
+        <Summary status={status} />
         <Divider className="m-0 border-[2px] border-stroke1a" />
         <PaymentMethod />
         <Footer status={status} onSubmit={form.submit} />

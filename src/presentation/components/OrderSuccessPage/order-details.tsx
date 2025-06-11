@@ -62,9 +62,12 @@ const OrderDetails: FC<Props> = (props) => {
       <Divider className="m-0" />
       <div className="flex items-start gap-[24px]">
         <div className="w-[80px] shrink-0 text-sm font-normal text-gray7">
-          Món
+          Sản phẩm
         </div>
-        <div className="text-xs font-normal">1 x Hamburger bò 2 x Mì Ý</div>
+        <div className="text-xs font-normal">
+          1 x Coca cola lon mừng năm mới 2025 (Lon 150ml, nguyên bản) 2 x Sting
+          rồng đỏ
+        </div>
       </div>
       <Divider className="m-0" />
       <div className="flex items-start gap-[24px]">

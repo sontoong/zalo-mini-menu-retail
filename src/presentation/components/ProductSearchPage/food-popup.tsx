@@ -69,20 +69,23 @@ const FoodPopup: FC<Props> = ({ children }) => {
             className="flex-1 overflow-auto"
           >
             <Form.Item name="quantity" hidden />
-            <div className="flex flex-col gap-[20px] overflow-y-auto px-[16px] pb-[200px]">
+            <div className="flex flex-col gap-[20px] overflow-y-auto px-[16px] pb-[150px]">
               {/* Brief */}
               <div className="flex flex-col gap-[12px]">
-                <div className="flex justify-between">
-                  <div className="text-xl font-medium">
-                    Coca cola lon mừng năm mới 2025
+                <div className="flex flex-col gap-[4px]">
+                  <div className="flex justify-between">
+                    <div className="text-xl font-medium">Hamburger bò</div>
+                    <div className="flex flex-col items-end justify-between">
+                      <div className="text-xl font-medium">
+                        {formatCurrency(120000)}
+                      </div>
+                      <div className="text-[15px] font-normal text-gray6 line-through">
+                        {formatCurrency(120000)}
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-end justify-between">
-                    <div className="text-xl font-medium text-primary">
-                      {formatCurrency(120000)}
-                    </div>
-                    <div className="text-[15px] font-normal text-gray6 line-through">
-                      {formatCurrency(120000)}
-                    </div>
+                  <div className="text-sm font-normal text-gray9">
+                    Hamburger gồm bò, xà lách, phô mai mỏng dai
                   </div>
                 </div>
                 <div className="h-[140px] overflow-hidden rounded-[12px]">
@@ -93,66 +96,69 @@ const FoodPopup: FC<Props> = ({ children }) => {
                   />
                 </div>
               </div>
-              {/* Details */}
-              <div className="flex flex-col gap-[12px]">
-                <div className="text-lg font-medium">{vol.title}</div>
-                <Form.Item name="volumn" noStyle>
-                  <Radio.ButtonGroup
-                    itemFlex={false}
-                    items={vol.options}
-                    render={(option) => (
-                      <div className="flex h-[37px] items-center justify-center gap-[1.5px] rounded-[8px] border border-stroke1 px-[18px]">
-                        {option?.label}
+              {/* Options */}
+              <div className="flex flex-col gap-[24px]">
+                <Form.Item name="options" noStyle>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="text-[15px] font-medium">
+                      {options.title}
+                    </div>
+                    <Checkbox.Group>
+                      <div className="flex w-full flex-col gap-[12px]">
+                        {options.options.map((option, index) => (
+                          <React.Fragment key={index}>
+                            <Checkbox
+                              value={option.value}
+                              className="custom-checkbox"
+                            >
+                              <div className="flex justify-between">
+                                <div className="text-sm font-normal">
+                                  {option.label.title}
+                                </div>
+                                <div className="text-sm font-medium text-gray8">
+                                  {formatCurrency(option.label.price)}
+                                </div>
+                              </div>
+                            </Checkbox>
+                            {index < options.options.length - 1 && (
+                              <Divider className="m-0" />
+                            )}
+                          </React.Fragment>
+                        ))}
                       </div>
-                    )}
-                    activeRender={(option) => (
-                      <div className="flex h-[37px] items-center justify-center rounded-[8px] border-[1.5px] border-infor3 bg-infor1 px-[18px]">
-                        {option?.label}
-                      </div>
-                    )}
-                    className="flex gap-[12px]"
+                    </Checkbox.Group>
+                  </div>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="text-[15px] font-medium">
+                      {options2.title}
+                    </div>
+                    <Radio.Group
+                      items={options2.options}
+                      render={(option) => (
+                        <div className="flex justify-between">
+                          <div className="text-sm font-normal">
+                            {option?.label.title}
+                          </div>
+                          <div className="text-sm font-medium text-gray8">
+                            {formatCurrency(option?.label.price)}
+                          </div>
+                        </div>
+                      )}
+                      className="flex flex-col gap-[12px]"
+                      divider={<Divider className="m-0" />}
+                    />
+                  </div>
+                </Form.Item>
+                <Form.Item
+                  name="notes"
+                  label={<div className="text-[15px] font-medium">Ghi chú</div>}
+                  labelCol={{ className: "!pb-0" }}
+                >
+                  <Input.TextArea
+                    placeholder="Nhập ghi chú"
+                    autoSize={{ minRows: 3, maxRows: 6 }}
                   />
                 </Form.Item>
-              </div>
-              <div className="flex flex-col gap-[12px]">
-                <div className="text-lg font-medium">{calo.title}</div>
-                <Form.Item name="calo" noStyle>
-                  <Radio.ButtonGroup
-                    itemFlex={false}
-                    items={calo.options}
-                    render={(option) => (
-                      <div className="flex h-[37px] w-fit items-center justify-center gap-[1.5px] rounded-[8px] border border-stroke1 px-[18px]">
-                        {option?.label}
-                      </div>
-                    )}
-                    activeRender={(option) => (
-                      <div className="flex h-[37px] w-fit items-center justify-center rounded-[8px] border-[1.5px] border-infor3 bg-infor1 px-[18px]">
-                        {option?.label}
-                      </div>
-                    )}
-                    className="flex gap-[12px]"
-                  />
-                </Form.Item>
-              </div>
-              {/* Description */}
-              <div className="flex flex-col gap-[8px]">
-                <div className="text-lg font-medium">Thông tin sản phẩm</div>
-                <div className="text-xs font-normal">
-                  Là loại nước ngọt được nhiều người yêu thích với hương vị thơm
-                  ngon, sảng khoái. Nước ngọt Coca Cola 320ml chính hãng nước
-                  ngọt Coca Cola với lượng gas lớn sẽ giúp bạn xua tan mọi cảm
-                  giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau khi
-                  hoạt động ngoài trời.
-                </div>
-                <div className="text-sm font-medium">
-                  Thương hiệu: <span className="font-normal">Coca cola</span>
-                </div>
-                <div className="text-sm font-medium">
-                  Sản xuất tại: <span className="font-normal">Mỹ</span>
-                </div>
-                <div className="text-sm font-medium">
-                  Loại nước: <span className="font-normal">Nước ngọt</span>
-                </div>
               </div>
             </div>
             {/* Footer */}
@@ -237,29 +243,29 @@ type Props = {
   children: (methods: { open: () => void }) => React.ReactNode;
 };
 
-const vol = {
-  title: "Dung tích",
+const options = {
+  title: "Topping thêm",
   options: [
     {
-      label: "150ml",
+      label: { title: "Phô mai", price: 40000 },
       value: "1",
     },
     {
-      label: "250ml",
+      label: { title: "Xà lách", price: 40000 },
       value: "2",
     },
   ],
 };
 
-const calo = {
-  title: "Độ calo",
+const options2 = {
+  title: "Độ chín",
   options: [
     {
-      label: "Không calo",
+      label: { title: "Chín kĩ", price: 40000 },
       value: "1",
     },
     {
-      label: "Có calo",
+      label: { title: "Chín tới", price: 40000 },
       value: "2",
     },
   ],

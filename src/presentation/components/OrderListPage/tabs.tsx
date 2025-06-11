@@ -24,16 +24,6 @@ export default Tabs;
 const tabs: TabsProps["items"] = [
   {
     key: "1",
-    label: "Tại bàn",
-    children: (
-      <div className="flex flex-col gap-[12px] bg-surface px-[16px] pb-[20px]">
-        <Filters />
-        <OrderList orders={orders1} />
-      </div>
-    ),
-  },
-  {
-    key: "2",
     label: "Giao hàng",
     children: (
       <div className="flex flex-col gap-[12px] bg-surface px-[16px] pb-[20px]">
@@ -43,7 +33,7 @@ const tabs: TabsProps["items"] = [
     ),
   },
   {
-    key: "3",
+    key: "2",
     label: "Đến lấy",
     children: (
       <div className="flex flex-col gap-[12px] bg-surface px-[16px] pb-[20px]">

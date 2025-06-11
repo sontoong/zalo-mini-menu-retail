@@ -168,7 +168,7 @@ export const OrderStatus: FC<{ status: keyof typeof orderStatus }> = ({
         <div className="flex gap-[8px] px-[16px]">
           <div className="text-sm font-medium text-neutral8">Lý do hủy:</div>
           <div className="h-[18px] rounded-[12px] border border-stroke3 px-[8px] text-xs font-normal text-gray8">
-            Đổi lịch
+            Thay đổi số lượng
           </div>
         </div>
         <div className="flex items-end gap-[12px] px-[16px]">

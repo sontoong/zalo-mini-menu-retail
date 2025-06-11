@@ -52,7 +52,7 @@ const RecenterButton = ({ position }: { position: LatLngTuple }) => {
     <Button.Icon
       icon={<img src={MapLocateIcon} />}
       onClick={handleRecenter}
-      className="absolute bottom-[100px] right-[16px] z-[999] size-[36px] !rounded-[8px] border border-stroke1 bg-white"
+      className="absolute right-[16px] top-[calc(100%-150px)] z-[999] size-[36px] !rounded-[8px] border border-stroke1 bg-white"
       style={{ boxShadow: "0px 1px 12px 0px #00000033" }}
     />
   );

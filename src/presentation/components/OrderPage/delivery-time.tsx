@@ -17,9 +17,11 @@ const DeliveryTime: FC<Props> = (props) => {
             </div>
             <div className="flex flex-col gap-[4px]">
               <div className="text-sm font-normal">{item?.label}</div>
-              <div className="text-xs font-normal text-neutral6">
-                {item?.description}
-              </div>
+              {item?.description ? (
+                <div className="text-xs font-normal text-neutral6">
+                  {item?.description}
+                </div>
+              ) : null}
             </div>
           </div>
         )}
@@ -30,9 +32,11 @@ const DeliveryTime: FC<Props> = (props) => {
             </div>
             <div className="flex flex-col gap-[4px]">
               <div className="text-sm font-normal">{item?.label}</div>
-              <div className="text-xs font-normal text-neutral6">
-                {item?.description}
-              </div>
+              {item?.description ? (
+                <div className="text-xs font-normal text-neutral6">
+                  {item?.description}
+                </div>
+              ) : null}
             </div>
           </div>
         )}

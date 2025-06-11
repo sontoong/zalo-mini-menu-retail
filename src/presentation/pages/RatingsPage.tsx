@@ -3,7 +3,6 @@ import { Header, Page } from "zmp-ui";
 import ArrowLeftIcon from "../static/arrow-left-blue.png";
 import {
   RatingsPageFeedbacks,
-  RatingsPageHighRatingServices,
   RatingsPageRatingChart,
 } from "../components/RatingsPage";
 
@@ -28,7 +27,6 @@ const RatingsPage = () => {
       <div className="flex-1 overflow-auto">
         <div className="flex flex-col gap-[20px] py-[12px]">
           <RatingsPageRatingChart />
-          <RatingsPageHighRatingServices />
           <RatingsPageFeedbacks />
         </div>
       </div>

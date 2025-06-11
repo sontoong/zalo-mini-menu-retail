@@ -7,7 +7,7 @@ import EditIcon from "../../static/edit-icon.png";
 export const Summary = () => {
   return (
     <div className="flex flex-col gap-[8px] px-[16px]">
-      <div className="text-[15px] font-medium">Danh sách món</div>
+      <div className="text-[15px] font-medium">Danh sách sản phẩm</div>
       <div className="flex flex-col gap-[12px]">
         <div className="flex flex-col gap-[12px]">
           {data.map((service, index) => (

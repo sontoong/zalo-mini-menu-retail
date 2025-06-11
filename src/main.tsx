@@ -17,7 +17,6 @@ import HomePage from "./presentation/pages/HomePage";
 import OrderPage from "./presentation/pages/OrderPage";
 import OrderSuccessPage from "./presentation/pages/OrderSuccessPage";
 import OrderCancelPage from "./presentation/pages/OrderCancelPage";
-import SchedulePage from "./presentation/pages/SchedulePage";
 import UserPage from "./presentation/pages/UserPage";
 import OrderListPage from "./presentation/pages/OrderListPage";
 import OrderDetailsPage from "./presentation/pages/OrderDetailsPage";
@@ -29,7 +28,7 @@ import RatingsPage from "./presentation/pages/RatingsPage";
 import UserLocationListPage from "./presentation/pages/UserLocationListPage";
 import UserLocationFormPage from "./presentation/pages/UserLocationFormPage";
 import UserCurrentLocationPage from "./presentation/pages/UserCurrentLocationPage";
-import TableOrderDetailsPage from "./presentation/pages/TableOrderDetailsPage";
+import ProductSearchPage from "./presentation/pages/ProductSearchPage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -76,10 +75,6 @@ const router = createBrowserRouter(
           element: <OrderCancelPage />,
         },
         {
-          path: "/schedule",
-          element: <SchedulePage />,
-        },
-        {
           path: "/profile",
           element: <UserPage />,
         },
@@ -124,8 +119,8 @@ const router = createBrowserRouter(
           element: <UserCurrentLocationPage />,
         },
         {
-          path: "/table-orders/:orderId",
-          element: <TableOrderDetailsPage />,
+          path: "/search-product",
+          element: <ProductSearchPage />,
         },
       ],
     },

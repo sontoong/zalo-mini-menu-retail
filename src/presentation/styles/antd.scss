@@ -17,9 +17,12 @@
 }
 
 // Select
-.customSelect {
+.customSelect.ant-select {
   .ant-select-selector {
     border: none !important;
+    .ant-select-selection-item {
+      font-weight: 500;
+    }
   }
   .ant-select-item-option:not(:last-child) {
     border-bottom: 1px solid #f4f6f4;
@@ -61,15 +64,6 @@
       width: 10px;
       height: 10px;
       transform: translate(3px, 3px);
-    }
-  }
-}
-
-// Select
-.custom-select.ant-select {
-  .ant-select-selector {
-    .ant-select-selection-item {
-      font-weight: 500;
     }
   }
 }

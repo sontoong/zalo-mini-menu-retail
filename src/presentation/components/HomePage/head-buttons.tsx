@@ -1,7 +1,6 @@
 import React from "react";
 import StarIcon from "../../static/ic_round-star.png";
 import ChevronRightIcon from "../../static/chevron-right.png";
-import MessageIcon from "../../static/messages-3.png";
 import { useNavigate } from "react-router-dom";
 
 const HeadButtons = () => {

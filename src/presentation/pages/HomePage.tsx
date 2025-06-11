@@ -5,6 +5,7 @@ import {
   HomePageHeadButtons,
   HomePageHeader,
   HomePageFoodList,
+  HomePageFilters,
 } from "../components/HomePage";
 import { Footer } from "../components/common/footer";
 import Promotion from "../components/HomePage/promotion";
@@ -19,7 +20,7 @@ const HomePage: FC = () => {
             className="pointer-events-none absolute inset-0 z-10"
             style={{
               background:
-                "linear-gradient(180deg, rgba(255, 255, 255, 0.544) 0.45%, rgba(255, 255, 255, 0) 35.76%, rgba(255, 255, 255, 0) 77.29%, #FAFBFC 100%)",
+                "linear-gradient(180.52deg, rgba(255, 255, 255, 0.544) 0.45%, rgba(255, 255, 255, 0) 35.76%)",
             }}
           />
           <Promotion />
@@ -28,7 +29,12 @@ const HomePage: FC = () => {
           <div className="absolute inset-x-0 top-0 z-20 -translate-y-1/2">
             <HomePageHeadButtons />
           </div>
-          <HomePageFoodList />
+          <div className="flex flex-col gap-[14px] pt-[38px]">
+            <div className="px-[16px]">
+              <HomePageFilters />
+            </div>
+            <HomePageFoodList />
+          </div>
         </div>
         <HomePageCartButton />
       </div>

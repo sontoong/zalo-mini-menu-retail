@@ -273,7 +273,7 @@ const CartOpenButton = () => {
             <div className="flex size-[32px] items-center justify-center rounded-full bg-infor1">
               <div className="text-base font-semibold text-infor4">2</div>
             </div>
-            <div className="text-[15px] font-medium">món</div>
+            <div className="text-[15px] font-medium">sản phẩm</div>
           </div>
           <div className="flex h-[36px] items-center gap-[10px] rounded-[8px] bg-[#00BFFF] px-[8px]">
             <div className="size-[20px]">

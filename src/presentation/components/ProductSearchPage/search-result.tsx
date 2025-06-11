@@ -5,9 +5,9 @@ import { formatCurrency } from "../../utils/helpers";
 import { FoodPopup } from "./food-popup";
 import { Divider } from "antd";
 
-const FoodList = () => {
+const SearchResultList = () => {
   return (
-    <div className="flex flex-col gap-[12px] px-[16px]">
+    <div className="flex flex-col gap-[12px] p-[18px]">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           <FoodPopup key={index}>
@@ -44,7 +44,7 @@ const FoodItem: FC<any> = ({ item, onClick }) => {
   );
 };
 
-export default FoodList;
+export default SearchResultList;
 
 const items = [
   {

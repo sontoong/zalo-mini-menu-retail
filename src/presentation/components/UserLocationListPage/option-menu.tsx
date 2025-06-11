@@ -16,7 +16,10 @@ const OptionMenu = () => {
         </React.Fragment>
       ))}
       {/* Add more button */}
-      <div className="flex items-center gap-[20px]">
+      <div
+        className="flex items-center gap-[20px]"
+        onClick={() => navigate("/user-location-form")}
+      >
         {/* Icon */}
         <div className="flex size-[40px] items-center justify-center rounded-full bg-primary1">
           <div className="size-[20px]">
@@ -24,10 +27,7 @@ const OptionMenu = () => {
           </div>
         </div>
         {/* Location */}
-        <div
-          className="flex flex-col"
-          onClick={() => navigate("/user-location-form")}
-        >
+        <div className="flex flex-col">
           <div className="text-[15px] font-medium text-blue5">Thêm mới</div>
           <div className="text-xs font-normal text-gray7">
             Lưu địa chỉ của bạn
@@ -39,8 +39,13 @@ const OptionMenu = () => {
 };
 
 const OptionMenuItem = ({ location }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="flex items-center gap-[20px]">
+    <div
+      className="flex items-center gap-[20px]"
+      onClick={() => navigate("/user-location-form")}
+    >
       {/* Icon */}
       <div className="flex size-[40px] items-center justify-center rounded-full bg-primary1">
         <div className="size-[20px]">

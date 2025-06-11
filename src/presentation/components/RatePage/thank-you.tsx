@@ -22,7 +22,7 @@ const RatingThankYou = () => {
           Cảm ơn đã đánh giá!
         </div>
         <div className="text-center text-sm font-normal text-gray8">
-          Đánh giá của bạn sẽ giúp cửa hàng nâng cao trải nghiệp khách hàng.
+          Đánh giá của bạn sẽ giúp cửa hàng nâng cao trải nghiệm khách hàng.
         </div>
       </div>
       <Button

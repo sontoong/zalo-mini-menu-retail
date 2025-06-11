@@ -1,6 +1,6 @@
 import { Divider } from "antd";
 import React, { FC } from "react";
-import FoodImg from "../../static/food-1.jpg";
+import FoodImg from "../../static/food-1.png";
 import { formatCurrency } from "../../utils/helpers";
 import { useNavigate } from "react-router-dom";
 import { orderMethods } from "../../constants/orderMethods";
@@ -19,11 +19,7 @@ const OrderListItem = ({ order }) => {
   const navigate = useNavigate();
 
   const goTo = () => {
-    if (order.method === orderMethods["1"].key) {
-      navigate(`/table-orders/${order.id}`, { state: order });
-    } else {
-      navigate(`/orders/${order.id}`, { state: order });
-    }
+    navigate(`/orders/${order.id}`, { state: order });
   };
 
   return (

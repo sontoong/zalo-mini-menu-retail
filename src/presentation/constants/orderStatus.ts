@@ -26,3 +26,5 @@ export const orderStatus = {
     key: "6",
   },
 } as const;
+
+export type OrderStatusType = keyof typeof orderStatus;

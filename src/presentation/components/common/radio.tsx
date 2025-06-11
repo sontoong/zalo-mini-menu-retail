@@ -3,6 +3,7 @@ import {
   Radio as OriginRadio,
   RadioGroupProps as OriginRadioGroupProps,
 } from "antd";
+import clsx from "clsx";
 
 type RecordType = {
   value: any;
@@ -36,6 +37,7 @@ function RadioButtonGroup({
   render,
   direction = "row",
   className,
+  itemFlex = true,
   ...rest
 }: RadioButtonGroupProps<RecordType>) {
   const handleClick = (value: number) => {
@@ -52,7 +54,7 @@ function RadioButtonGroup({
       <div className={className} style={{ flexDirection: direction }}>
         {items.map((item, index) => (
           <div
-            className="flex-1 cursor-pointer"
+            className={clsx("cursor-pointer", { "flex-1": itemFlex })}
             onClick={() => handleClick(item.value)}
             key={index}
           >
@@ -81,6 +83,7 @@ type RadioButtonGroupProps<RecordType> = {
   direction?: "row" | "column" | "row-reverse" | "column-reverse";
   render: (item?: RecordType) => React.ReactNode; //specify how to render, eg: render={(item) => <div>{item?.name}</div>}
   activeRender: (item?: RecordType) => React.ReactNode; //specify how to render when focused, eg: activeRender={(item) => (<div className="text-primary">{item?.name}</div>)}
+  itemFlex?: boolean;
   value?: any;
   onChange?: (value: any) => void;
   className?: string;
