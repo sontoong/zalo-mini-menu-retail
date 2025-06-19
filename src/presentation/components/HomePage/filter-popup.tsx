@@ -2,10 +2,10 @@ import React, { FC, useState } from "react";
 import { createPortal } from "react-dom";
 import { Sheet } from "zmp-ui";
 import CloseIcon from "../../static/close-icon.png";
-import { Checkbox, Divider, Input } from "antd";
+import { Divider } from "antd";
 import { Form } from "../common/form";
 import { Button } from "../common/button";
-import { NestedCheckbox } from "../common/checkbox";
+import { Checkbox, NestedCheckbox } from "../common/checkbox";
 
 const FilterPopup: FC<Props> = ({ children }) => {
   const [form] = Form.useForm();
