@@ -39,8 +39,8 @@ const NestedCheckbox: FC<NestedCheckboxProps> = ({
   const plainOptions = option.children.map((child) => child.value);
 
   const checkAll = plainOptions.length === checkedList.length;
-  const indeterminate =
-    checkedList.length > 0 && checkedList.length < plainOptions.length;
+  // const indeterminate =
+  //   checkedList.length > 0 && checkedList.length < plainOptions.length;
 
   const onInnerChange = (list: string[]) => {
     setCheckedList(list);
@@ -69,7 +69,7 @@ const NestedCheckbox: FC<NestedCheckboxProps> = ({
           label: (
             <div onClick={(e) => e.stopPropagation()} className="w-fit">
               <Checkbox
-                indeterminate={indeterminate}
+                // indeterminate={indeterminate}
                 onChange={onCheckAllChange}
                 checked={checkAll}
                 skipGroup
