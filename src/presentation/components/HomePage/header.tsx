@@ -43,7 +43,7 @@ const Header = () => {
         (
           <div className="relative flex flex-col gap-[12px] pb-[8px] pt-[34px]">
             <div className="text-xl font-medium">Tạp hóa ABC</div>
-            <HomePageFilters />
+            {opacity === 1 ? <HomePageFilters /> : null}
           </div>
         ) as unknown as string
       }

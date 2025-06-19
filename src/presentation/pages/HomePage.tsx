@@ -30,7 +30,7 @@ const HomePage: FC = () => {
             <HomePageHeadButtons />
           </div>
           <div className="flex flex-col gap-[14px] pt-[38px]">
-            <div className="px-[16px]">
+            <div className="px-[12px]">
               <HomePageFilters />
             </div>
             <HomePageFoodList />
